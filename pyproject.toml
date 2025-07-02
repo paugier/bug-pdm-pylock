@@ -1,0 +1,21 @@
+[project]
+name = "bug-pdm-pylock"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "pierre.augier", email = "pierre.augier@univ-grenoble-alpes.fr"},
+]
+dependencies = []
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[dependency-groups]
+
+dev = [
+    "flit_core >=3.2,<4",
+    "-e foo @ file:///${PROJECT_ROOT}/lib",
+]
+
+[tool.pdm]
+distribution = false
